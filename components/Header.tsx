@@ -29,9 +29,9 @@ const Header = () => {
         </nav>
 
         {/* Right Section: Login & Sign Up */}
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center space-x-6 ">
           <Link href="/signup">
-            <button className="px-5 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition">
+            <button className=" hidden md:flex px-5 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition">
               Join Us
             </button>
           </Link>
@@ -51,12 +51,9 @@ const Header = () => {
               <span className="py-2 text-gray-800">{item}</span>
             </Link>
           ))}
-          <Link href="/login" className="py-2 text-gray-800" onClick={() => setIsMenuOpen(false)}>
-            Login
-          </Link>
           <Link href="/signup">
             <button className="mt-2 px-5 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition">
-              Sign Up
+              Join Us
             </button>
           </Link>
         </nav>

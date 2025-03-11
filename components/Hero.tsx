@@ -15,20 +15,20 @@ const Hero = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] w-full overflow-hidden  bg-transparent">
+      <section className="relative  w-full overflow-hidden  bg-transparent">
 
         {/* Hero Content */}
         <div className="container mx-auto px-4 pt-20 sm:pt-32">
           <div className="relative z-10 flex flex-col items-center text-center">
-            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-7xl">
+            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-4xl lg:text-7xl">
               Home Is Where <br className="hidden md:block" /> Your Story Begins.
             </h1>
 
-            <p className="mt-4 max-w-xl text-base text-gray-600 sm:text-lg">
-              Unlock Your Dream Home. Explore Endless Possibilities with{" "}
-              <span className="text-blue-500">HomeVista</span> – Your Premier Real
-              Estate Destination.
-            </p>
+           <p className="mt-4 max-w-sm md:max-w-xs lg:max-w-xl text-sm md:text-base lg:text-lg text-gray-600">
+                 Unlock Your Dream Home. Explore Endless Possibilities with{" "}
+               <span className="text-blue-500">HomeVista</span> – Your Premier Real Estate Destination.
+           </p>
+
 
             <Link href="/properties">
               <button className="mt-8 rounded-full bg-blue-500 px-8 py-4 text-lg text-white transition-all hover:bg-blue-600">
@@ -85,40 +85,38 @@ const Hero = () => {
         </div>
 
        {/* Image Collage Section */}
-<div className="">
-<div className="flex gap-2 justify-center items-center mt-10 flex-wrap relative">
-  {/* Image 1 */}
-  <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-6deg]">
-    <Image src={img1} alt="img1" layout="fill" objectFit="cover" />
-  </div>
+       <div className="relative w-full h-fit overflow-hidden">
+  <div className="flex justify-center items-center mt-10 flex-wrap relative gap-0">
+    {/* Image 1 */}
+    <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-8deg]">
+      <Image src={img1} alt="img1" layout="fill" objectFit="cover" />
+    </div>
 
-  {/* Image 2 */}
-  <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-2 -ml-6">
-    <Image src={img2} alt="img2" layout="fill" objectFit="cover" />
-  </div>
+    {/* Image 2 */}
+    <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-2 -ml-6 sm:-ml-4">
+      <Image src={img2} alt="img2" layout="fill" objectFit="cover" />
+    </div>
 
-  {/* Image 3 */}
-  <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[8deg] -ml-6">
-    <Image src={img2} alt="img2" layout="fill" objectFit="cover" />
-  </div>
+    {/* Image 3 */}
+    <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[8deg] -ml-6 sm:-ml-4">
+      <Image src={img3} alt="img3" layout="fill" objectFit="cover" />
+    </div>
 
-  {/* Image 4 */}
-  <div className=" hidden sm:block relative w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-4deg] -ml-6">
-    <Image src={img2} alt="img2" layout="fill" objectFit="cover" />
-  </div>
+    {/* Image 4 (Hidden on small screens) */}
+    <div className="hidden sm:block relative w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-4deg] -ml-4">
+      <Image src={img4} alt="img4" layout="fill" objectFit="cover" />
+    </div>
 
-  {/* Image 5 (Hidden on small screens) */}
-  <div className="hidden sm:block relative w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-6 -ml-6">
-    <Image src={img3} alt="img3" layout="fill" objectFit="cover" />
+    {/* Image 5 (Visible only on large screens) */}
+    <div className="hidden lg:block relative w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-6 -ml-4">
+      <Image src={img5} alt="img5" layout="fill" objectFit="cover" />
+    </div>
   </div>
 </div>
-
-</div>
-
       </section>
 
       {/* Footer Section */}
-      <section className="mt-80 w-full bg-black px-4 py-16 text-white sm:mt-96 sm:px-16">
+      <section className=" w-full bg-black px-4 py-16 text-white mt-8 sm:mt-12 sm:px-16">
         <div className="container mx-auto flex flex-col items-center justify-between gap-8 sm:flex-row">
           <div>
             <h2 className="text-4xl font-bold leading-snug sm:text-5xl">
