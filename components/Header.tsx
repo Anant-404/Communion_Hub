@@ -8,14 +8,14 @@ import Logo from "@/assets/Logocommunion.0485ada0760e4748313f.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-  const pathname = usePathname(); // Get current page
+  const pathname = usePathname(); 
 
   // Function to handle scrolling or redirection
   const handleScroll = (sectionId: string) => {
     if (pathname === "/") {
       const section = document.getElementById(sectionId);
       if (section) {
-        const offset = 80; // Adjust based on header height
+        const offset = 80; 
         const elementPosition = section.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
           top: elementPosition - offset,
@@ -40,19 +40,26 @@ const Header = () => {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center space-x-8 text-gray-600">
-          <Link href="/">
-            <span className="hover:text-black cursor-pointer transition">Home</span>
-          </Link>
-          <button onClick={() => handleScroll("about")} className="hover:text-black cursor-pointer transition">
-            About
-          </button>
-          <Link href="/Eventpage">
-            <span className="hover:text-black cursor-pointer transition">Events</span>
-          </Link>
-          <button onClick={() => handleScroll("faq")} className="hover:text-black cursor-pointer transition">
-            FAQ
-          </button>
-        </nav>
+  <Link href="/" className="text-gray-600 hover:text-black transition">
+    Home
+  </Link>
+  <button
+    onClick={() => handleScroll("about")}
+    className="text-gray-600 hover:text-black transition"
+  >
+    About
+  </button>
+  <Link href="/Eventpage" className="text-gray-600 hover:text-black transition">
+    Events
+  </Link>
+  <button
+    onClick={() => handleScroll("faq")}
+    className="text-gray-600 hover:text-black transition"
+  >
+    FAQ
+  </button>
+</nav>
+
 
         {/* Right Section: Join Us */}
         <div className="flex items-center space-x-6">
