@@ -1,6 +1,4 @@
 'use client';
-
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import img1 from "@/assets/male-business-executive-giving-speech.jpg";
@@ -8,13 +6,21 @@ import img2 from "@/assets/people-taking-part-high-protocol-event (1).jpg";
 import img3 from "@/assets/confident-woman-holding-presentation.jpg";
 import img4 from "@/assets/person-holding-speech-official-event.jpg";
 import img5 from "@/assets/portrait-elegant-professional-businessman-speaking-conference.jpg";
+import {motion} from "framer-motion";
 
 
 const Hero = () => {
+  
   return (
     <>
       {/* Hero Section */}
       <section className="relative  w-full overflow-hidden  bg-transparent">
+      <motion.div
+      className="h-full"
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
+      >
 
         {/* Hero Content */}
         <div className="container mx-auto px-4 pt-20 sm:pt-32">
@@ -28,11 +34,12 @@ const Hero = () => {
            </p>
 
 
-            <Link href="/Eventpage">
-              <button className="mt-8 rounded-full bg-blue-500 px-8 py-4 text-lg text-white transition-all hover:bg-blue-600">
+           <button className="hover:cursor-pointer mt-8 rounded-full bg-blue-500 px-8 py-4 text-lg text-white transition-all hover:bg-blue-600">
+              <Link href="/Eventpage">
+              
                 Explore Events
-              </button>
-            </Link>
+                </Link>
+           </button>
 
             {/* Statistics Grid - Mobile */}
             <div className="mt-8 grid grid-cols-2 gap-4 sm:hidden">
@@ -86,7 +93,7 @@ const Hero = () => {
        <div className="relative w-full h-fit overflow-hidden">
         <div className="flex justify-center items-center mt-10 flex-wrap md:flex-nowrap gap-2 md:gap-4">
           {/* Image 1 */}
-          <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-8deg]">
+          <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-8deg] ">
             <Image src={img1} alt="img1" layout="fill" objectFit="cover" />
           </div>
       
@@ -100,7 +107,7 @@ const Hero = () => {
             <Image src={img3} alt="img3" layout="fill" objectFit="cover" />
           </div>
       
-          {/* Image 4 (Now visible properly on medium screens) */}
+          {/* Image 4 (on medium screens) */}
           <div className="hidden sm:block relative w-32 h-32 sm:w-48 sm:h-48 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-4deg]">
             <Image src={img4} alt="img4" layout="fill" objectFit="cover" />
           </div>
@@ -111,35 +118,40 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      </motion.div>
       </section>
 
       {/* about */}
-      <section id="about" className="w-full bg-black px-4 py-16 text-white mt-16 sm:mt-12 sm:px-16">
-         <div className="container mx-auto grid gap-8 lg:grid-cols-2 items-center">
+      <section id="about" className="w-full bg-black px-4 py-16 text-white mt-16 sm:mt-12 sm:px-16 ">
        
+         <div className="container mx-auto grid gap-8 lg:grid-cols-2 items-center">
            {/* Left Section (Text Content) */}
            <div className="lg:pr-12">
-             <h2 className="text-4xl font-bold leading-snug sm:text-5xl mb-6">
-               Why Communion Rocks!
+             <h2 className="text-4xl font-bold leading-snug sm:text-5xl mb-6" >
+               Why Communion Rocks! 
              </h2>
-      <p className="max-w-xl text-lg leading-relaxed mb-8">
-               Communion is not just another platform—it's a vibrant space that unites
+             <p className="max-w-xl text-lg leading-relaxed mb-8">
+               Communion is not just another platform—it&apos;s a vibrant space that unites
                diverse faiths, beliefs, and traditions. By promoting collaboration and
-               connection, we're fostering a world where differences become strengths
+               connection, we&apos;re fostering a world where differences become strengths
                and unity becomes the norm.
              </p>
              <button className="mt-4 text-white flex items-center gap-2 hover:underline">
-        Why Join Us? <span>→</span>
+                 Why Join Us? <span>→</span>
              </button>
            </div>
 
            {/* Right Section (Feature Cards) */}
+         
            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
              {/* Card 1 */}
              <div className="bg-[#1A1A1A] rounded-xl p-6 text-center hover:scale-105 transition-transform lg:h-[380px] xl:h-[420px] flex flex-col justify-between">
                <div>
                  <div className="mb-4 text-4xl">👥</div>
                  <h3 className="text-xl font-semibold mb-2">Unifying Communities</h3>
+                 <p className="text-sm mb-4">
+                 Communion bridges diverse religious communities, becoming the social
+                 </p>
                </div>
                <button className="mt-4 border border-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-white hover:text-black">
                  Learn More <span>→</span>
@@ -176,7 +188,10 @@ const Hero = () => {
                </button>
              </div>
            </div>
+    
          </div>
+         
+         
       </section>
     </>
   );

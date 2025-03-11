@@ -6,7 +6,7 @@ import EventList from '@/components/EventList';
 import { Event } from '@/app/types/index';
 import WhoWeAre from '@/components/WhoWeAre';
 
-const page = () => {
+const Page = () => {
   const [events, setEvents] = useState<Event[]>([
     {
       id: '1',
@@ -56,4 +56,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

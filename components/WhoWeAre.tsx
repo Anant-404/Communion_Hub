@@ -2,10 +2,20 @@
 import Image from "next/image";
 import { FaSearch, FaHandsHelping, FaNetworkWired, FaLightbulb } from "react-icons/fa";
 import img8 from "@/assets/discover-img.e37c47c6656e8a5c0043.avif";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const WhoWeAre = () => {
+    const SecRef = useRef(null);
+    const isSecRefInView = useInView(SecRef);
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" ref={SecRef}>
+        <motion.div
+              initial={{ y: "200px",opacity:0 }}
+              animate={isSecRefInView ? { y: 0, opacity:1} : {}}
+              transition={{ duration: 1 }}
+              >
+        
       <div className="max-w-6xl mx-auto px-6 lg:px-12 text-center">
         
         {/* Header */}
@@ -31,6 +41,7 @@ const WhoWeAre = () => {
           </div>
 
           {/* Right - Features */}
+       
           <div className="w-full lg:w-1/2 text-left">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Where Creativity Meets Community Impact
@@ -70,9 +81,10 @@ const WhoWeAre = () => {
               ))}
             </ul>
           </div>
-
+       
         </div>
       </div>
+      </motion.div>
     </section>
   );
 };

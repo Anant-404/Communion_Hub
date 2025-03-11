@@ -2,11 +2,15 @@
 import Image from "next/image";
 import img6 from "@/assets/rear-view-female-business-executive-giving-speech.jpg";
 import img7 from "@/assets/people-taking-part-high-protocol-event.jpg";
+import {motion, useInView} from "framer-motion";
+import { useRef } from "react";
 
 const Engagements = () => {
+    const SecRef = useRef(null);
+    const isSecRefInView = useInView(SecRef);
   return (
     <section className="w-full bg-transparent px-4 py-16 sm:px-16">
-      <div className="container mx-auto flex flex-col items-center gap-12">
+      <div className="container mx-auto flex flex-col items-center gap-12" ref={SecRef}>
 
         {/* Section Heading */}
         <div className="text-center">
@@ -21,6 +25,11 @@ const Engagements = () => {
         </div>
 
         {/* Image & Content Section */}
+         <motion.div
+              initial={{ y: "200px",opacity:0 }}
+              animate={isSecRefInView ? { y: 0, opacity:1} : {}}
+              transition={{ duration: 1 }}
+              >
         <div className="flex flex-col lg:flex-row items-center gap-12">
 
           {/* Image Section */}
@@ -86,8 +95,10 @@ const Engagements = () => {
           </div>
 
         </div>
+        </motion.div>
 
       </div>
+
     </section>
   );
 };

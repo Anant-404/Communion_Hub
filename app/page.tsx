@@ -1,7 +1,6 @@
 'use client'
 import Engagements from "@/components/Engagements";
 import FAQSection from "@/components/FAQ";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { useEffect } from "react";
 

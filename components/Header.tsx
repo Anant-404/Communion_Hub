@@ -40,21 +40,35 @@ const Header = () => {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center space-x-8 text-gray-600">
-  <Link href="/" className="text-gray-600 hover:text-black transition">
+  <Link href="/" 
+  className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
+  after:transition-all after:duration-300 hover:after:w-full"
+>
     Home
   </Link>
   <button
     onClick={() => handleScroll("about")}
-    className="text-gray-600 hover:text-black transition"
+    className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
+  after:transition-all after:duration-300 hover:after:w-full"
+
   >
     About
   </button>
-  <Link href="/Eventpage" className="text-gray-600 hover:text-black transition">
+  <Link href="/Eventpage" 
+  className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
+  after:transition-all after:duration-300 hover:after:w-full"
+>
     Events
   </Link>
   <button
     onClick={() => handleScroll("faq")}
-    className="text-gray-600 hover:text-black transition"
+    className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
+  after:transition-all after:duration-300 hover:after:w-full"
+
   >
     FAQ
   </button>
@@ -64,7 +78,7 @@ const Header = () => {
         {/* Right Section: Join Us */}
         <div className="flex items-center space-x-6">
           <Link href="/signup">
-            <button className="hidden md:flex px-5 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition">
+            <button className="hidden hover:cursor-pointer md:flex px-5 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition">
               Join Us
             </button>
           </Link>
