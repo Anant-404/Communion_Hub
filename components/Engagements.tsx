@@ -56,7 +56,7 @@ const Engagements = () => {
           </div>
 
           {/* Content Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 w-full sm:pl-4 sm:ml-4 md:pl-0 md:ml-0 lg:pl-0 lg:ml-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 w-full pl-6 sm:pl-0">
             {/* Feature 1 */}
             <div>
               <div className="text-3xl mb-4">🌍</div>
