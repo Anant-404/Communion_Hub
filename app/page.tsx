@@ -1,4 +1,6 @@
 'use client'
+import Engagements from "@/components/Engagements";
+import FAQSection from "@/components/FAQ";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { useEffect } from "react";
@@ -40,8 +42,9 @@ export default function Home() {
     <>
      <div>
      <div className="fixed inset-0 bg-gradient-mouse"></div>
-      <Header/>
       <Hero/>
+      <Engagements/>
+      <FAQSection/>
       
      </div>
      

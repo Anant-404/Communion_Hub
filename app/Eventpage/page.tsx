@@ -4,6 +4,7 @@ import { useState } from 'react';
 import AddEventForm from '@/components/AddEventForm';
 import EventList from '@/components/EventList';
 import { Event } from '@/app/types/index';
+import WhoWeAre from '@/components/WhoWeAre';
 
 const page = () => {
   const [events, setEvents] = useState<Event[]>([
@@ -47,7 +48,9 @@ const page = () => {
         <div className="grid gap-8 md:grid-cols-[1fr_350px]">
           <EventList events={events} />
           <AddEventForm onAddEvent={addEvent} />
+          
         </div>
+        <WhoWeAre/>
       </div>
     </main>
   );

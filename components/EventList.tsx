@@ -17,6 +17,15 @@ export default function EventList({ events }: EventListProps) {
     selectedCategory === 'All' ? true : event.category === selectedCategory
   );
 
+  // Function to format the date in a stable MM/DD/YYYY format
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Ensure 2-digit month
+    const day = String(date.getDate()).padStart(2, '0'); // Ensure 2-digit day
+    return `${month}/${day}/${year}`; // MM/DD/YYYY format
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-sm p-6">
       <div className="flex items-center justify-between mb-6">
@@ -53,7 +62,7 @@ export default function EventList({ events }: EventListProps) {
               </span>
             </div>
             <div className="text-sm text-gray-500 space-y-1">
-              <p>📅 {new Date(event.date).toLocaleDateString()}</p>
+              <p>📅 {formatDate(event.date)}</p>
               <p>📍 {event.location}</p>
               <p className="text-gray-600 mt-2">{event.description}</p>
             </div>
