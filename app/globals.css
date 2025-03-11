@@ -1,2 +1,21 @@
 @import "tailwindcss";
 
+.bg-gradient-mouse {
+  /* Circle radius = 200px. Tweak for bigger/smaller glow. */
+  background: radial-gradient(
+    circle 1000px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    /* Brighter center at 0% */
+    rgba(30, 144, 255, 0.2),
+    /* Gradually fade out around 70% */
+    rgba(0, 87, 255, 0.05),
+    
+  
+    transparent 
+  );
+  /* Slightly longer transition for color/opacity changes */
+  filter: blur(12px);
+  pointer-events: none; /* so it doesn't interfere with clicks */
+  transition: background 0.2s ease-out;
+  pointer-events: none;
+  z-index: -1; /* Ensure it's above other elements */
+}
