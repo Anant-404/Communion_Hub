@@ -25,7 +25,7 @@ const Hero = () => {
         {/* Hero Content */}
         <div className="container mx-auto px-4 pt-20 sm:pt-32">
           <div className="relative z-10 flex flex-col items-center text-center">
-            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-4xl lg:text-7xl ml-8">
+            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-4xl lg:text-7xl lg:ml-8">
             Connect Communities, <br className="hidden md:block" /> Build Meaningful Bonds.
             </h1>
 
@@ -91,33 +91,33 @@ const Hero = () => {
 
        {/* Image Collage Section */}
        <div className="relative w-full h-fit overflow-hidden">
-        <div className="flex justify-center items-center mt-10 flex-wrap md:flex-nowrap gap-2 md:gap-4">
-          {/* Image 1 */}
-          <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-8deg] ">
-            <Image src={img1} alt="img1" layout="fill" objectFit="cover" />
-          </div>
-      
-          {/* Image 2 */}
-          <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-2">
-            <Image src={img2} alt="img2" layout="fill" objectFit="cover" />
-          </div>
-      
-          {/* Image 3 */}
-          <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[8deg]">
-            <Image src={img3} alt="img3" layout="fill" objectFit="cover" />
-          </div>
-      
-          {/* Image 4 (on medium screens) */}
-          <div className="hidden sm:block relative w-32 h-32 sm:w-48 sm:h-48 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-4deg]">
-            <Image src={img4} alt="img4" layout="fill" objectFit="cover" />
-          </div>
-
-          {/* Image 5 (Only visible on large screens) */}
-          <div className="hidden lg:block relative w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-6">
-            <Image src={img5} alt="img5" layout="fill" objectFit="cover" />
-          </div>
-        </div>
-      </div>
+         <div className="flex justify-center items-center mt-10 flex-wrap sm:flex-nowrap gap-1 md:gap-2 lg:gap-2">
+           {/* Image 1 */}
+           <div className="relative w-24 h-24 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-8deg]">
+             <Image src={img1} alt="img1" layout="fill" objectFit="cover" />
+           </div>
+       
+           {/* Image 2 */}
+           <div className="relative w-24 h-24 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-2 -ml-3 md:-ml-4">
+             <Image src={img2} alt="img2" layout="fill" objectFit="cover" />
+           </div>
+       
+           {/* Image 3 */}
+           <div className="relative w-24 h-24 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[8deg] -ml-3 md:-ml-4">
+             <Image src={img3} alt="img3" layout="fill" objectFit="cover" />
+           </div>
+       
+           {/* Image 4 (shown only on small screens and above) */}
+           <div className="hidden sm:block relative w-24 h-24 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-60 lg:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-[-4deg] -ml-3 md:-ml-4">
+             <Image src={img4} alt="img4" layout="fill" objectFit="cover" />
+           </div>
+       
+           {/* Image 5 (shown only on large screens) */}
+           <div className="hidden lg:block relative w-32 h-32 sm:w-40 sm:h-40 md:w-60 md:h-60 overflow-hidden rounded-xl border-4 border-gray-200 rotate-6 -ml-3 md:-ml-4">
+             <Image src={img5} alt="img5" layout="fill" objectFit="cover" />
+           </div>
+         </div>
+       </div>
       </motion.div>
       </section>
 

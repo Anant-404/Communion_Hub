@@ -40,19 +40,25 @@ const Page = () => {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-          Community Events
-        </h1>
-        <div className="grid gap-8 md:grid-cols-[1fr_350px]">
+    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="max-w-7xl mx-auto w-full overflow-hidden">
+      <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+        Community Events
+      </h1>
+      <div className="grid gap-8 md:grid-cols-[1fr_minmax(250px,350px)] w-full">
+        <div className="w-full max-w-full">
           <EventList events={events} />
-          <AddEventForm onAddEvent={addEvent} />
-          
         </div>
-        <WhoWeAre/>
+        <div className="w-full sm:w-auto sm:max-w-lg sm:mx-0 mx-auto">
+          <AddEventForm onAddEvent={addEvent} />
+        </div>
+
       </div>
-    </main>
+      <WhoWeAre />
+    </div>
+  </main>
+  
+  
   );
 };
 

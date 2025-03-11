@@ -12,27 +12,30 @@ type EventListProps = {
 export default function EventList({ events }: EventListProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  // Filter events by category
+  // Filter events based on selected category
   const filteredEvents = events.filter((event) =>
     selectedCategory === 'All' ? true : event.category === selectedCategory
   );
 
-  // Function to format the date in a stable MM/DD/YYYY format
+  // Function to format the date in MM/DD/YYYY format
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Ensure 2-digit month
-    const day = String(date.getDate()).padStart(2, '0'); // Ensure 2-digit day
-    return `${month}/${day}/${year}`; // MM/DD/YYYY format
+    const month = String(date.getMonth() + 1).padStart(2, '0'); 
+    const day = String(date.getDate()).padStart(2, '0'); 
+    return `${month}/${day}/${year}`; 
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800">Upcoming Events</h2>
+    <div className="bg-white rounded-lg shadow-sm p-6 w-full max-w-full overflow-hidden">
+      <div className="flex flex-col sm:flex-row items-center sm:justify-between mb-6 w-full">
+        {/* Centered Heading */}
+        <h2 className="text-center w-full sm:w-auto sm:text-2xl font-semibold text-gray-800">
+          Upcoming Events
+        </h2>
 
-        {/* Category Filter */}
-        <div className="flex gap-2">
+        {/* Category Filter - Stacks below on mobile */}
+        <div className="flex flex-wrap justify-center gap-2 mt-4 sm:mt-0">
           {CATEGORIES.map((category) => (
             <button
               key={category}
@@ -49,11 +52,11 @@ export default function EventList({ events }: EventListProps) {
         </div>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-4 w-full max-w-full overflow-hidden">
         {filteredEvents.map((event) => (
           <div
             key={event.id}
-            className="border border-gray-200 rounded-lg p-4 hover:border-blue-200 transition-colors"
+            className="border border-gray-200 rounded-lg p-4 hover:border-blue-200 transition-colors w-full"
           >
             <div className="flex justify-between items-start mb-2">
               <h3 className="text-xl font-medium text-gray-900">{event.title}</h3>

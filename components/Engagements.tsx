@@ -9,7 +9,7 @@ const Engagements = () => {
     const SecRef = useRef(null);
     const isSecRefInView = useInView(SecRef);
   return (
-    <section className="w-full bg-transparent px-4 py-16 sm:px-16">
+    <section className="w-full bg-transparent py-16 sm:px-16 container mx-auto">
       <div className="container mx-auto flex flex-col items-center gap-12" ref={SecRef}>
 
         {/* Section Heading */}

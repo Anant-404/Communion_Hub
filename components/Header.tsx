@@ -40,39 +40,39 @@ const Header = () => {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center space-x-8 text-gray-600">
-  <Link href="/" 
-  className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
-  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
-  after:transition-all after:duration-300 hover:after:w-full"
->
-    Home
-  </Link>
-  <button
-    onClick={() => handleScroll("about")}
-    className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
-  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
-  after:transition-all after:duration-300 hover:after:w-full"
-
-  >
-    About
-  </button>
-  <Link href="/Eventpage" 
-  className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
-  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
-  after:transition-all after:duration-300 hover:after:w-full"
->
-    Events
-  </Link>
-  <button
-    onClick={() => handleScroll("faq")}
-    className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
-  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
-  after:transition-all after:duration-300 hover:after:w-full"
-
-  >
-    FAQ
-  </button>
-</nav>
+          <Link href="/" 
+          className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
+          after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
+          after:transition-all after:duration-300 hover:after:w-full"
+        >
+           Home
+        </Link>
+        <button
+          onClick={() => handleScroll("about")}
+          className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
+        after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
+        after:transition-all after:duration-300 hover:after:w-full"
+      
+        >
+          About
+        </button>
+        <Link href="/Eventpage" 
+        className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
+        after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
+        after:transition-all after:duration-300 hover:after:w-full"
+      >
+           Events
+         </Link>
+         <button
+           onClick={() => handleScroll("faq")}
+           className="relative text-gray-600 hover:!text-black hover:cursor-pointer transition-all duration-300 ease-in-out 
+         after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black 
+         after:transition-all after:duration-300 hover:after:w-full"
+      
+         >
+           FAQ
+         </button>
+      </nav>
 
 
         {/* Right Section: Join Us */}
@@ -99,7 +99,7 @@ const Header = () => {
           <button onClick={() => { handleScroll("about"); setIsMenuOpen(false); }} className="py-2 text-gray-800">
             About
           </button>
-          <Link href="/events" onClick={() => setIsMenuOpen(false)}>
+          <Link href="/Eventpage" onClick={() => setIsMenuOpen(false)}>
             <span className="py-2 text-gray-800">Events</span>
           </Link>
           <button onClick={() => { handleScroll("faq"); setIsMenuOpen(false); }} className="py-2 text-gray-800">
